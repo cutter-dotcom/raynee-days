@@ -79,7 +79,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "Email",
-    href: "mailto:hello@rayneedays.com",
+    href: "mailto:raynee@rayneedays.com",
     icon: <MailIcon />,
   },
 ];
@@ -218,8 +218,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom row: copyright */}
-        <div className="pt-8 text-center">
+        {/* Bottom row: copyright + email */}
+        <div className="pt-8 text-center flex flex-col gap-2 items-center">
+          <a
+            href="mailto:raynee@rayneedays.com"
+            className="text-sm text-white/70 hover:text-white transition-colors duration-200 tracking-wide"
+          >
+            raynee@rayneedays.com
+          </a>
           <p className="text-xs text-white/35 tracking-wide">
             &copy; 2026 Raynee Days. All rights reserved.
           </p>
