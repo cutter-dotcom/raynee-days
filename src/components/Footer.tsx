@@ -69,12 +69,12 @@ const FOOTER_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "https://instagram.com/rayneedays",
+    href: "https://www.instagram.com/raynee.days",
     icon: <InstagramIcon />,
   },
   {
     label: "TikTok",
-    href: "https://tiktok.com/@rayneedays",
+    href: "https://www.tiktok.com/@rayneedays39",
     icon: <TikTokIcon />,
   },
   {

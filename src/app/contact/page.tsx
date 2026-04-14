@@ -59,12 +59,12 @@ function MailIcon() {
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/raynee.days",
     icon: <InstagramIcon />,
   },
   {
     label: "TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@rayneedays39",
     icon: <TikTokIcon />,
   },
   {
