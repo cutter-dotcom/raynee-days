@@ -3,69 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SHOP_ITEMS } from "./items";
 
 type Category = "all" | "prints" | "stickers";
-
-interface ShopItem {
-  id: number;
-  title: string;
-  price: number;
-  category: "prints" | "stickers";
-  bgFrom: string;
-  bgTo: string;
-  image?: string;
-  matchingSticker?: boolean;
-}
-
-const SHOP_ITEMS: ShopItem[] = [
-  {
-    id: 1,
-    title: "Blueberry Morning",
-    price: 40,
-    category: "prints",
-    bgFrom: "#F5D5E8",
-    bgTo: "#E8458B",
-    image: "/art/blueberry-toast.jpg",
-  },
-  {
-    id: 2,
-    title: "Surfer's Hymn",
-    price: 50,
-    category: "prints",
-    bgFrom: "#D6EEE9",
-    bgTo: "#4AABA8",
-    image: "/art/surfer-girl.jpg",
-    matchingSticker: true,
-  },
-  {
-    id: 3,
-    title: "Surfer Girl",
-    price: 5,
-    category: "stickers",
-    bgFrom: "#6DC4C1",
-    bgTo: "#4AABA8",
-    image: "/art/surfer-girl.jpg",
-  },
-  {
-    id: 4,
-    title: "Birthday Martini",
-    price: 45,
-    category: "prints",
-    bgFrom: "#F5D5E8",
-    bgTo: "#C97BA8",
-    image: "/art/birthday-martini.jpg",
-    matchingSticker: true,
-  },
-  {
-    id: 5,
-    title: "Dirty Martini Olives",
-    price: 5,
-    category: "stickers",
-    bgFrom: "#E8F0D8",
-    bgTo: "#A8C070",
-    image: "/art/olives-sticker.png",
-  },
-];
 
 const FILTER_TABS: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
@@ -151,9 +91,13 @@ export default function ShopPage() {
             const isSticker = item.category === "stickers";
 
             return (
-              <article key={item.id} className="glass-card overflow-hidden flex flex-col relative">
+              <Link
+                key={item.id}
+                href={`/shop/${item.slug}`}
+                className="glass-card overflow-hidden flex flex-col relative group hover:-translate-y-1 transition-transform duration-200"
+              >
                 {/* Matching sticker badge */}
-                {item.matchingSticker && (
+                {item.matchingStickerSlug && (
                   <span
                     className="absolute top-3 right-3 z-10 text-xs font-medium px-2.5 py-1 rounded-full"
                     style={{
@@ -241,19 +185,18 @@ export default function ShopPage() {
                   </p>
 
                   <div className="mt-auto pt-2">
-                    <Link
-                      href="/contact"
-                      className="glass-btn text-sm inline-block w-full text-center"
+                    <span
+                      className="glass-btn text-sm inline-block w-full text-center group-hover:bg-white/40 transition-colors duration-200"
                       style={{
                         color: "var(--color-teal-dark)",
                         borderColor: "rgba(74,171,168,0.35)",
                       }}
                     >
-                      Inquire
-                    </Link>
+                      View details
+                    </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>
