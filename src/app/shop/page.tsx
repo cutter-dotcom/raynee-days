@@ -46,6 +46,25 @@ const SHOP_ITEMS: ShopItem[] = [
     bgTo: "#4AABA8",
     image: "/art/surfer-girl.jpg",
   },
+  {
+    id: 4,
+    title: "Birthday Martini",
+    price: 45,
+    category: "prints",
+    bgFrom: "#F5D5E8",
+    bgTo: "#C97BA8",
+    image: "/art/birthday-martini.jpg",
+    matchingSticker: true,
+  },
+  {
+    id: 5,
+    title: "Dirty Martini Olives",
+    price: 5,
+    category: "stickers",
+    bgFrom: "#E8F0D8",
+    bgTo: "#A8C070",
+    image: "/art/olives-sticker.png",
+  },
 ];
 
 const FILTER_TABS: { label: string; value: Category }[] = [
