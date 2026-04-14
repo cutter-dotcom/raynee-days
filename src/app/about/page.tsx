@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Raynee Days",
@@ -78,10 +79,10 @@ export default function AboutPage() {
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
 
-          {/* Left: photo placeholder */}
+          {/* Left: portrait */}
           <div className="flex flex-col gap-4">
             <div
-              className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden flex flex-col items-center justify-center gap-3"
+              className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden"
               style={{
                 background:
                   "linear-gradient(145deg, var(--color-teal) 0%, var(--color-teal-light) 35%, var(--color-cream-dark) 70%, var(--color-cream) 100%)",
@@ -89,51 +90,13 @@ export default function AboutPage() {
                   "0 20px 60px rgba(74, 171, 168, 0.2), 0 4px 16px rgba(0,0,0,0.06)",
               }}
             >
-              {/* Decorative inner circle */}
-              <div
-                className="absolute w-32 h-32 rounded-full opacity-20"
-                style={{
-                  background:
-                    "radial-gradient(circle, var(--color-cream) 0%, transparent 70%)",
-                  top: "20%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-                aria-hidden="true"
-              />
-              {/* Leaf icon */}
-              <div
-                className="relative z-10 text-white/60"
-                aria-hidden="true"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-10 h-10"
-                >
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-              <p
-                className="relative z-10 text-white/70 text-sm tracking-wider"
-                style={{ fontFamily: "var(--font-dancing-script), cursive" }}
-              >
-                Photo Coming Soon
-              </p>
-              {/* Bottom wave decoration */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-24 opacity-15"
-                style={{
-                  background:
-                    "linear-gradient(to top, var(--color-navy), transparent)",
-                }}
-                aria-hidden="true"
+              <Image
+                src="/art/raynee-portrait.png"
+                alt="Raynee — portrait"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
             </div>
 
