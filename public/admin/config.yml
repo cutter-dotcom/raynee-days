@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: cutter-dotcom/raynee-days
+  branch: main
+  base_url: https://rayneedays.com
+  auth_endpoint: api/auth
+
+# Uploaded images get committed to this folder so Next.js can serve them
+media_folder: "public/art"
+public_folder: "/art"
+
+# Turn on the editorial workflow (draft -> review -> publish) — nicer for Raynee
+publish_mode: editorial_workflow
+
+site_url: https://rayneedays.com
+display_url: https://rayneedays.com
+logo_url: /art/whirlpool-cover.png
+
+collections:
+  - name: "shop"
+    label: "Shop"
+    label_singular: "Shop item"
+    files:
+      - name: "shop_items"
+        label: "All shop items"
+        file: "content/shop-items.json"
+        description: "Paintings, prints, and stickers. Add, edit, or remove items here."
+        fields:
+          - name: "items"
+            label: "Items"
+            label_singular: "Item"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID (unique number)", widget: "number", value_type: "int", min: 1 }
+              - { name: "slug", label: "URL slug (lowercase, dashes only — e.g. 'blueberry-morning')", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "price", label: "Price (USD)", widget: "number", value_type: "int", min: 0 }
+              - name: "category"
+                label: "Category"
+                widget: "select"
+                options: ["prints", "stickers"]
+              - { name: "image", label: "Artwork image", widget: "image" }
+              - { name: "description", label: "Description (short paragraph)", widget: "text", required: false }
+              - name: "matchingStickerSlug"
+                label: "Matching sticker slug (optional — link a print to its sticker by slug)"
+                widget: "string"
+                required: false
+              - { name: "bgFrom", label: "Background gradient — top color (hex, e.g. #F5D5E8)", widget: "string", pattern: ['^#[0-9A-Fa-f]{6}$', 'Must be a 6-digit hex color like #F5D5E8'] }
+              - { name: "bgTo", label: "Background gradient — bottom color (hex)", widget: "string", pattern: ['^#[0-9A-Fa-f]{6}$', 'Must be a 6-digit hex color like #E8458B'] }
