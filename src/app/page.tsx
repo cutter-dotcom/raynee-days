@@ -72,6 +72,26 @@ function HeroSection() {
         poetry, paint &amp; salt water
       </p>
 
+      {/* Amazon CTA — buy Whirlpool */}
+      <a
+        href="https://www.amazon.ca/Whirlpool-Raynee-Woodworth/dp/B0GX9QMD5S"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="glass-btn relative z-10 mt-10 inline-flex items-center gap-2 text-sm font-[family-name:var(--font-dm-sans)] text-[var(--color-navy)]"
+        aria-label="Buy Whirlpool by Raynee Woodworth on Amazon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-4 h-4 opacity-70"
+          aria-hidden="true"
+        >
+          <path d="M13.23 10.56V10c-1.94.02-3.99.2-3.99 2.28 0 .98.51 1.64 1.37 1.64.64 0 1.21-.39 1.56-1.03.43-.79.06-1.33.06-2.33M17.07 19.43c-.52.39-1.35.43-1.94.16-.78-.57-1.38-1.5-1.36-2.72 0-1.18.64-2.03 1.5-2.5.86-.47 1.97-.52 2.68-.14.01.86.01 1.64.01 2.52.03.87-.2 1.81-.89 2.68m3.47 1.84c-.66-.48-1.34-.96-2.02-1.44-.7-.5-1.21-.91-1.11-1.88-.01-1.62-.02-3.24.01-4.85.01-.94.01-1.88.01-2.82 0-.45-.04-.84-.14-1.15-.81-2.41-3.08-3.1-5.36-2.94-1.08.07-2.08.35-2.89.88-.81.53-1.37 1.33-1.37 2.33h1.59c.07-.75.58-1.33 1.5-1.58.42-.12.85-.17 1.28-.15.86.04 1.61.36 2.05 1.01.38.55.48 1.27.44 2.1-.9-.14-1.82-.19-2.63-.1-2.66.29-4.09 1.78-4.09 3.93 0 2.38 1.57 3.73 3.82 3.73 1.52 0 2.71-.72 3.43-1.95.09.5.26.97.53 1.37.31.46.76.81 1.34 1.05 1.01.43 1.95.22 2.61-.32z" />
+        </svg>
+        Buy Whirlpool on Amazon
+      </a>
+
       {/* Scroll nudge */}
       <div
         className="relative z-10 mt-16 flex flex-col items-center gap-2 text-[var(--color-navy)]/40"
