@@ -104,7 +104,7 @@ export default function BookPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://www.amazon.ca/Whirlpool-Raynee-Woodworth/dp/B0GX9QMD5S"
+                  href="https://www.amazon.com/Whirlpool-Raynee-Woodworth/dp/B0GX9QMD5S"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-btn text-sm inline-flex items-center gap-2"

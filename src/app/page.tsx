@@ -74,7 +74,7 @@ function HeroSection() {
 
       {/* Amazon CTA — buy Whirlpool */}
       <a
-        href="https://www.amazon.ca/Whirlpool-Raynee-Woodworth/dp/B0GX9QMD5S"
+        href="https://www.amazon.com/Whirlpool-Raynee-Woodworth/dp/B0GX9QMD5S"
         target="_blank"
         rel="noopener noreferrer"
         className="glass-btn relative z-10 mt-10 inline-flex items-center gap-2 text-sm font-[family-name:var(--font-dm-sans)] text-[var(--color-navy)]"
